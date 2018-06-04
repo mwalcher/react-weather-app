@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
+    "react": "16.3.2",
+    "react-dom": "16.3.2",
     "react-scripts": "1.1.1"
   },
   "scripts": {
+    "build": "yarn sass:build && react-scripts build",
+    "eject": "react-scripts eject",
+    "sass:watch": "node-sass --watch src/assets/styles/sass --output src/assets/styles/css",
+    "sass:build": "sass --update src/assets/styles/sass:src/assets/styles/css",
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=jsdom"
   }
 }
